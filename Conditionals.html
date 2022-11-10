@@ -1,0 +1,127 @@
+<DOCTYPE! html>
+<html>
+    <head>
+        <title>KURTO CONDITIONALS</title>
+        <style>
+            body{
+                background-image:linear-gradient(black,black),url("dark-aesthetic-wallpaper-1920x1080-17.jpg");
+	            background-size: cover;
+	            background-blend-mode: saturation;
+            }
+            h1{
+                text-align:center;
+                color:rgb(255, 255, 255);
+            }
+            .container{
+                background: linear-gradient(to bottom, #ffcc66 0%, #ffff99ab 100%);
+                border-style:solid;
+                border-color:rgb(71, 78, 78);
+                border-width: 4pt;
+                width: 75%;
+                height: 80%;
+                margin-top: 10pt;
+            }
+
+            #Numbers{
+                font-size:x-large;
+            }
+
+            #ShowResult{
+                font-size:x-large;
+                font-weight:bold;
+            }
+
+            #Process{
+                font-size:xx-large;
+
+            }
+
+            #Wait{
+                color:rgb(10, 33, 33);
+                font-size: 150px;
+            }
+            #subText{
+                color:#c5ba97;
+                font-size: 20px;
+            }
+            #title{
+                text-decoration: underline;
+	            text-align: center;
+	            text-shadow: 0 1px 0 #181a16, 0 2px 0 #20201e, 0 3px 0 rgb(33, 34, 31), 0 4px 0 #313128, 0 5px 0 rgb(66, 68, 57), 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+	            color:rgb(204, 199, 168);
+	            font-size: 40px;
+            }
+            button {
+                background-color: white;
+                border: none;
+                color: black;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.4s;
+            }
+
+            button:hover {
+	            box-shadow: 0 12px 16px 0 rgba(198, 191, 21, 0.45),0 17px 50px 0 rgba(0,0,0,0.19);
+            }  
+
+        </style>
+    </head>
+    <body>
+        <center>
+        <h1 id="title">TESTING OF CONDITIONAL CODE</h1>
+        <button onClick="myFunction()">PRESS ME TO START ACTION</button>
+        <div class="container">
+        <h2 id="Wait">PRESS THE BUTTON TO START ....</h2>
+        <h2 id="Process"></h2>
+        <p id="Numbers"></p>
+        <p id="ShowResult"></p>
+    </div>
+    <h1>CONDITIONS:</h1>
+    <h1 id="subText">
+        if (num1 < num2 && num1&&num2 % 2 != 0)     // ADDITION<br>
+        if(num1 > num2 && num1&&num2 % 2 != 0)      // SUBTRACTION<br>
+        if(num1 == num2)                            // MULTIPLICATION<br>
+        if(num1&&num2% 2 == 0)                      // DIVISION<br>
+    </h1>
+    </center>
+
+        <script>
+            function myFunction() {
+                document.getElementById("Wait").innerHTML = "YOUR AWAITED RESULT...";
+
+                var result = 0;
+                var num1 = prompt("Please Enter Your First Value:");
+                var num2 = prompt("Please Enter Your Second Value");
+                
+                if (num1 < num2 && num1&&num2 % 2 != 0){
+                    result = num1 + num2;
+                    document.getElementById("Process").innerHTML = "Process used: Addition";
+                }
+                else if(num1 > num2 && num1&&num2 % 2 != 0){
+                    result = num1 - num2;
+                    document.getElementById("Process").innerHTML = "Process used: Subtraction";
+                }
+                else if(num1 == num2){
+                    result = num1 * num2;
+                    document.getElementById("Process").innerHTML = "Process used: Multiplication";
+                }
+                else if(num1 % 2 == 0 && num2 % 2 == 0){
+                    result = num1 / num2;
+                    document.getElementById("Process").innerHTML = "Process used: Division";
+                }
+                else{
+                    document.getElementById("Process").innerHTML = "Process used: No condition was met";
+                }
+                document.querySelector("#Wait").style.fontSize="130px";
+                document.getElementById("ShowResult").innerHTML = "The result: "+result;
+                document.getElementById("Numbers").innerHTML = "Given Numbers:"+"<br>"+"First number: "+num1 +"<br>"+"Second number: " +num2;
+            }
+        </script>
+    </body>
+</html>

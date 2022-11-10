@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KURTO LOOP DIAMONDS</title>
+        <style>
+            body{
+                background-image:linear-gradient(black,black),url("dark-aesthetic-wallpaper-1920x1080-17.jpg");
+	            background-size: cover;
+	            background-blend-mode: saturation;
+            }
+            h1{
+                text-align:center;
+                color:rgb(184, 162, 39);
+            }
+            .container{
+                background: linear-gradient(to bottom, #ffcc66 0%, #ffff99ab 100%);
+                border-style:solid;
+                border-color:rgb(71, 78, 78);
+                border-width: 4pt;
+                width: 75%;
+                height: 80%;
+                margin-top: 10pt;
+            }
+            
+            #Wait{
+                color:rgb(10, 33, 33);
+                font-size: 150px;
+            }
+            #title{
+                text-decoration: underline;
+	            text-align: center;
+	            text-shadow: 0 1px 0 #181a16, 0 2px 0 #20201e, 0 3px 0 rgb(33, 34, 31), 0 4px 0 #313128, 0 5px 0 rgb(66, 68, 57), 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+	            color:rgb(204, 199, 168);
+	            font-size: 40px;
+            }
+            button {
+                background-color: white;
+                border: none;
+                color: black;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.4s;
+            }
+
+            button:hover {
+	            box-shadow: 0 12px 16px 0 rgba(198, 191, 21, 0.45),0 17px 50px 0 rgba(0,0,0,0.19);
+            }  
+            
+        </style>
+    </head>
+    <body>
+        <CENTER>
+            <h1 id="title">DIAMOND LOOP</h1>
+            <button onClick="myFunction()">PRESS ME TO START ACTION</button>
+            <div class="container">
+                <h2 id="Wait">How many layers for diamond loop? ....</h2>
+            </div>
+        </CENTER>
+        <script>
+            function myFunction(){
+                var rows, spaces, star;
+                var nrow = prompt("Enter the number of layers you want your diamond to have:")
+                document.write("<h1> YOUR DIAMOND LOOP OF "+nrow+"... </h1>");
+                
+        for(rows = 1;rows<=nrow;rows++){ 
+			for(spaces = rows;spaces<=nrow;spaces++){
+				document.write("&nbsp;&nbsp;");
+			}
+			for(star = 1;star<=rows;star++){
+				document.write("&nbsp;* ");
+			}
+			document.write('<br/>');
+		}
+		for(rows =1;rows<nrow;rows++){
+			for(spaces=0;spaces<=rows;spaces++){
+				document.write("&nbsp;&nbsp;");
+			}
+			for(star=rows;star<nrow;star++){
+				document.write("&nbsp;* ");
+			}
+			document.write('<br/>');
+		}
+        document.write("<h2> Refresh browser to go back to main page. </h2>");
+
+		}
+	  
+        </script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+body{
+	background-image:linear-gradient(black,black),url("dark-aesthetic-wallpaper-1920x1080-17.jpg");
+	background-size: cover;
+	background-blend-mode: saturation;
+}
+
+h1{
+	text-decoration: underline;
+	text-align: center;
+	text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+	color: #FFFFFF;
+	font-size: 40px;
+}
+
+p{
+	color:  white;
+	font-style: italic;
+	font-size: 25px;
+}
+
+h3{
+	color: white;
+	font-size: 0.75em;
+}
+
+.contentBox{
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.50);
+	padding: 20px;
+}
+
+button {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+button:hover {
+	box-shadow: 0 12px 16px 0 rgba(198, 191, 21, 0.45),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
